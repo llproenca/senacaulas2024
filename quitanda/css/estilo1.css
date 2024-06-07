@@ -1,0 +1,72 @@
+/* seletores de identificação */
+/* ID - todas as regras vão ser aplicadas  */
+/* nos elementos identificados pelo atributo */
+/* ID  */
+body{
+    margin: 0px;
+    background-color: gray;
+}
+#geral{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    border: solid 1px black;
+    background-color: white;
+    float: left;
+}  
+
+#menu{
+    margin: 10px;
+    border: solid 1px red;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border: solid 1px black;
+}
+
+#rodape{
+    position: fixed;
+    bottom: 15px;
+    border: solid 1px red;
+    background-color: black;
+    width: 80%;
+}
+
+ul li{
+    display: inline;
+    /* deixar os itens alinhados */
+}
+
+.noticia{
+    margin: 10px;
+    border: solid 1px blue;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+
+.noticia h1{
+    text-align: center;
+    text-transform: uppercase; 
+    /* para deixar as letras maiusculas */
+}
+
+.noticia p{
+    margin-left: 10px;
+    margin-right: 5px;
+    text-align: justify;
+}
+
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+}

@@ -1,0 +1,5 @@
+.btn-info{
+    --bs-btn-bg:#dc3545;
+    --bs-btn-border-color:black;
+    --bs-btn-hover-bg: hwb(0 19% 59%);
+}

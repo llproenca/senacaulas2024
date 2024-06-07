@@ -1,0 +1,104 @@
+/* ELEMENTO HTML */
+body{
+    border: solid 1px #000;
+    margin: 0 10%;
+}
+
+/* SELETOR: identificador - uso o atributo ID */
+#menu{
+    border: solid 1px red;
+}
+
+#menu ul{
+    list-style:none;
+}
+
+#menu ul li{
+    display: inline-block;
+    /* border: solid 3px black; */
+    /* border-radius: 10px 10px 0 0; */
+    margin: 0 10px 0 0;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    
+}
+
+/* PSEUDO CLASSE */
+/* #menu ul li:hover{
+    font-size: 1.1em;
+    background-color: gray;
+} */
+
+#menu ul li a{
+    border: solid 3px black;    
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    background-color:cadetblue;
+    display: block;
+    height: 100%;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    height: 75%;
+    color: white;
+
+}
+
+#menu ul li a:hover{
+    text-decoration: underline;
+    background-color: #255130;
+    color: white;
+}
+
+
+/* SELETOR DE CLASSE */
+.foto{
+    width: 250px;
+    border-radius: 10px;
+    margin: 5px;    
+}
+
+.coluna{
+    width: 22.9%;
+    min-height: 500px;
+    max-height: 450px;
+    /* background-color: #04940C; */
+    margin: 0.8%;
+    text-align: left;
+    float: left;
+    overflow: visible;
+}
+
+.coluna h1, .coluna h2, 
+.coluna h3{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.coluna p{
+    margin: 5px 10px;
+}
+
+/* .coluna img:hover{
+    transition: transform .2s;
+    width: 300px;
+} */
+
+.borda {
+    border: 1px  #236 solid;
+    border-radius: 10px;
+}
+
+.fundo-branco{
+    background-color: white;
+    color:black
+}
+
+.fundo-escuro{
+    background-color: black;
+    color:white;
+}
+
+

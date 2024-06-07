@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA JAVASCRIT</title>
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+   
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">EVENTOS JAVASCRIT</h2>
+            <!-- keyUp -->
+            <div class="border border-1 border-dark p-3 m-2 rounded">
+                <h3 class="text-center">KeyUp</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nomeTratado" class="form-label">Nome Tratado</label>
+                        <input type="text" name="nomeTratado" id="nomeTratado" class="form-control" disabled>
+                    </div>
+                </div>
+            </div>
+            <!-- /keyUp -->
+            <!-- blur -->
+            <div class="border border-1 border-dark p-3 m-2 rounded">
+                <h3 class="text-center">Blur</h3>
+                <h4 class="text-center">Somar 2 números</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="n1" class="form-label">1º número:</label>
+                        <input type="number" name="n1" id="n1" min="0" max="10000" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="n2" class="form-label">2º número:</label>
+                        <input type="number" name="n2" id="n2" min="0" max="10000" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="resultadoSoma" class="form-label">Resultado da Soma</label>
+                        <input type="number" name="resultadoSoma" id="resultadoSoma" class="form-control" disabled>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /blur -->
+
+            <!-- click -->
+            <div class="border border-1 border-dark p-3 m-2 rounded">
+                <h3 class="text-center">Click</h3>
+                <h4 class="text-center">Calculadora</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="numero1" class="form-label">1º número:</label>
+                        <input type="number" name="numero1" id="numero1" min="0" max="10000" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="numero2" class="form-label">2º número:</label>
+                        <input type="number" name="numero2" id="numero2" min="0" max="10000" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="resultadoCalculadora" class="form-label">Resultado</label>
+                        <input type="text" name="resultadoCalculadora" id="resultadoCalculadora" class="form-control"
+                            disabled>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button id="btnSomar" name="btnSomarn" class="m-2 btn btn-success">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button id="btnSubtrair" name="btnSubtrair" class="m-2 btn btn-primary">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <button id="btnMultiplicar" name="btnMultiplicar" class="m-2 btn btn-warning">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="btnDividir" name="btnDividir" class="m-2 btn btn-danger">
+                            <i class="fa-solid fa-divide"></i>
+                        </button>
+                        <button id="btnLimpar" name="btnLimpar" class="m-2 btn btn-dark">
+                            <i class="fa-solid fa-broom"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /click -->
+        </div>
+    </div>
+</body>
+<script>
+    $('#nome').keyup(function (e) { 
+        let nome = $(this) .val();
+        nome = nome.toUpperCase().trim();
+        $('#nomeTratado').val(nome);
+    });
+
+    $('#n2').blur(function (e) { 
+        e.preventDefault();
+        let n1 = $('#n1').val();
+        let n2 = $('#n2').val();
+        let resultado; 
+        resultado = parseInt (n1) + parseInt(n2);
+        $('#resultadoSoma').val(resultado);
+    });
+
+    $('#btnSomar').click(function (e) { 
+        e.preventDefault();
+        let resultado;
+        let n1 = $('#numero1').val();
+        let n2 = $('#numero2').val();
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+        resultado = n1+n2;
+        console.log(resultado);
+        $('#resultadoCalculadora').val(resultado);
+        
+    });
+
+    $('#btnSubtrair').click(function (e) { 
+        e.preventDefault();
+        let resultado;
+        let n1 = $('#numero1').val();
+        let n2 = $('#numero2').val();
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+        resultado = n1-n2;
+        console.log(resultado);
+        $('#resultadoCalculadora').val(resultado);
+        
+    });
+
+    $('#btnMultiplicar').click(function (e) { 
+        e.preventDefault();
+        let resultado;
+        let n1 = $('#numero1').val();
+        let n2 = $('#numero2').val();
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+        resultado = n1*n2;
+        console.log(resultado);
+        $('#resultadoCalculadora').val(resultado);
+        
+    });
+
+    $('#btnDividir').click(function (e) { 
+        e.preventDefault();
+        let resultado;
+        let n1 = $('#numero1').val();
+        let n2 = $('#numero2').val();
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+
+        if(n2==0){
+            resultado = 'Divisão por zero'
+        }else{
+            resultado = n1/n2;
+        }
+    
+        console.log(resultado);
+        $('#resultadoCalculadora').val(resultado);
+        
+    });
+
+    $('#btnLimpar').click(function (e) { 
+        e.preventDefault();
+        $('#numero1').val('');
+        $('#numero2').val('');
+        $('#resultadoCalculadora').val('');
+        
+    });
+</script>
+
+</html>

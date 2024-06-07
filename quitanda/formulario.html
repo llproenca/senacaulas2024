@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="?">
+        <fieldset>
+            <legend>Campos</legend>
+            <p>
+                <label for="nome">
+                    Nome:
+                </label>
+                <input type="text" 
+                name="nome"  
+                id="nome">
+            </p>
+
+            <p>
+                <label for="anexo">Anexo</label>
+                <input type="file" name="anexo" id="anexo">
+            </p>
+            
+            <p>
+                <label for="qtd">
+                    Qtd:
+                </label>
+                <input type="number" 
+                name="qtd" 
+                id="qtd">
+            </p>
+            <p>
+                <label for="dt">
+                    Data:
+                </label>
+                <input type="date" 
+                name="dt" 
+                id="dt">
+            </p>   
+                <p>
+                    <label for="hora">
+                        Hora
+                    </label>
+                    <input type="time" 
+                    name="hora" 
+                    id="hora">
+                </p>
+                <p>
+                    <label for="agenda">
+                    Agenda
+                    </label>
+                    <input type="date" 
+                    name="agenda" 
+                    id="agenda">
+                </p>
+                <p>
+                    <label for="cor">
+                        Cor
+                        <input type="color" 
+                        name="cor" 
+                        id="cor">
+                    </label>
+                </p>
+                <p>
+                    <label for="email">
+                        E-mail
+                    </label>
+                    <input type="email" 
+                    name="email" 
+                    id="email" required>    
+                </p> 
+                <p>
+                    <label for="telefone">
+                        Telefone
+                    </label>
+                    <input type="tel" 
+                    name="telefone" 
+                    id="telefone">
+                </p>
+
+                <p>
+                    <label for="senha">Senha</label>
+                    <input type="password" 
+                    name="senha" 
+                    id="senha">
+                </p>
+
+                <p>
+                    <label for="uf">Estado</label>
+                    <select name="uf" id="uf" required>
+                        <option value="">
+                            Selecione
+                        </option>
+                        <option value="SP">
+                            São Paulo
+                        </option>
+                        <option value="RJ">
+                            Rio de Janeiro
+                        </option>
+                        <option value="MG">
+                            Minas Gerais
+                        </option>
+                        </select>
+                </p>
+
+                <p>
+                    <label for="cidade">Cidade*</label>
+                    <select name="cidade" id="cidade" required>
+                        <option value="">
+                            Selecione
+                        </option>
+                        <optgroup label="São Paulo">
+                            <option value="SAD">
+                                Santo André
+                            </option>
+                            <option value="SBC">
+                                São Bernardo do Campo
+                            </option>                            
+                        </optgroup>
+                        <optgroup label="Rio de Janeiro">
+                            <option value="Paraty">
+                                Paraty
+                            </option>
+                            <option value="Campo">
+                                Campos dos Guitacases
+                            </option>
+                        </optgroup>
+                    </select>
+
+                    <p>
+                        <input type="checkbox" name="azul" id="azul" value="azul">
+                        <label for="azul">Azul</label>
+                        <br>
+                        <input type="checkbox" name="vermelho" id="vermelho" value="vermelho">
+                        <label for="vermelho">Vermelho</label>
+                        <br>
+                        <input type="checkbox" name="preto" id="preto" value="preto">
+                        <label for="preto">Preto</label>
+                    </p>
+                </p>
+
+                <p>
+                    <input type="radio" name="sexo" id="m" value="m" required>
+                    <label for="m">Masculino</label>
+                    <br>
+                    <input type="radio" name="sexo" id="f" value="f">
+                    <label for="f">Feminino</label>
+                    <br>
+                    <input type="radio" name="sexo" id="ni" value="ni">
+                    <label for="ni">Não Informar</label>
+                </p>
+
+                <p>
+                    <label for="conteudo">
+                        Conteudo
+                    </label>
+                    <br>
+                    <textarea name="conteudo" id="conteudo" 
+                    cols="30" rows="10"></textarea>
+                </p>
+                
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+
+        </fieldset>
+    </form>
+</body>
+</html>
